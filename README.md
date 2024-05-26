@@ -21,7 +21,7 @@ This repository contains a simple shopping website built with HTML, CSS, JavaScr
 6. Mark orders as completed.
 7. View completed orders.
 
-##Map integration:
+## Map integration:
 Go to [mapbox](https://www.mapbox.com/) and sign up, get API token and replace in ```orders.php``` to sort orders.
 
 ## Usage
