@@ -97,6 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Save Product
         </button>
+         <a href="orders.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View orders</a>
     </form>
     <a href="logout.php" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded inline-block mt-4">Logout</a>
         <a href="del_product.php" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded inline-block mt-4">Delete Product</a>

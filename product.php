@@ -41,7 +41,7 @@
             <div class="p-4">
                 <h1 class="text-3xl font-bold mb-2"><?php echo $productData['name']; ?></h1>
                 <p class="text-gray-700 mb-4"><?php echo $productData['description']; ?></p>
-                <p class="text-2xl font-bold mb-4">$<?php echo $productData['price']; ?></p>
+                <p class="text-2xl font-bold mb-4">Rs <?php echo $productData['price']; ?></p>
                 <button id="buy-now" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Buy Now
                 </button>
@@ -99,7 +99,64 @@
         </div>
     </div>
 
-    <script src="assets/js/main.js"></script>
+    <!-- Order Confirmation Modal -->
+    <div id="order-confirmation" class="fixed z-10 inset-0 overflow-y-auto hidden">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-md text-center">
+                <h2 class="text-2xl font-bold mb-4">Order Received</h2>
+                <p class="text-gray-700 mb-4">Thank you for your order! We have received it and will process it shortly.</p>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="close-confirmation">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buyNowButton = document.getElementById('buy-now');
+            const buyModal = document.getElementById('buy-modal');
+            const closeModalButton = document.getElementById('close-modal');
+            const buyForm = document.getElementById('buy-form');
+            const orderConfirmation = document.getElementById('order-confirmation');
+            const closeConfirmationButton = document.getElementById('close-confirmation');
+
+            buyNowButton.addEventListener('click', function() {
+                buyModal.classList.remove('hidden');
+            });
+
+            closeModalButton.addEventListener('click', function() {
+                buyModal.classList.add('hidden');
+            });
+
+            buyForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const formData = new FormData(buyForm);
+
+                fetch('process_order.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        buyModal.classList.add('hidden');
+                        orderConfirmation.classList.remove('hidden');
+                    } else {
+                        alert('There was an error processing your order. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error processing your order. Please try again.');
+                });
+            });
+
+            closeConfirmationButton.addEventListener('click', function() {
+                orderConfirmation.classList.add('hidden');
+            });
+        });
+    </script>
 
     <?php include 'footer.php'; ?>
 </body>
