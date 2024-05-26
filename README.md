@@ -1,0 +1,33 @@
+# Shopping Website
+
+## Description
+
+This repository contains a simple shopping website built with HTML, CSS, JavaScript, Tailwind CSS, and PHP. It features product browsing, shopping cart functionality, and an integrated email system for notifications.
+
+## Installation
+
+1. Clone the repository.
+2. Set up a local server environment (e.g., XAMPP, WAMP).
+3. Import the provided SQL database.
+4. No separate database setup is required, as JSON files will serve as the database.
+5. Start your local server and access the website.
+
+## Usage
+
+1. Sign up or log in.
+2. Browse products and add to cart.
+3. Proceed to checkout.
+4. Enter shipping/payment info.
+5. Complete purchase and receive email confirmation.
+
+## Contributing
+
+Contributions are welcome! Fork the repository, make changes, and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For any inquiries, reach out to [masroorahmad3592@email.com](mailto:masroorahmad3592@email.com).
