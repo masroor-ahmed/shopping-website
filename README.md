@@ -11,9 +11,22 @@ This repository contains a simple shopping website built with HTML, CSS, JavaScr
 3. No separate database setup is required, as JSON files will serve as the database.
 4. Start your local server and access the website.
 
+## Features for admin
+
+1. Add products.
+2. Delete any product.
+3. Receive instant mail on new order.
+4. Track orders.
+5. Location-wise sorted orders.
+6. Mark orders as completed.
+7. View completed orders.
+
+##Map integration:
+Go to [mapbox](https://www.mapbox.com/) and sign up, get API token and replace in ```orders.php``` to sort orders.
+
 ## Usage
 
-1. Browse products and add to cart.
+1. Browse products.
 2. Proceed to checkout.
 3. Enter shipping/payment info.
 4. Complete purchase and receive email confirmation.
