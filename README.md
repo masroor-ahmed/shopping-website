@@ -2,23 +2,21 @@
 
 ## Description
 
-This repository contains a simple shopping website built with HTML, CSS, JavaScript, Tailwind CSS, and PHP. It features product browsing, shopping cart functionality, and an integrated email system for notifications.
+This repository contains a simple shopping website built with HTML, CSS, JavaScript, Tailwind CSS, and PHP. It features product browsing, order managment dashboard for admin, Location wise sorted orders (from near to far) and an integrated email system for notifications.
 
 ## Installation
 
 1. Clone the repository.
 2. Set up a local server environment (e.g., XAMPP, WAMP).
-3. Import the provided SQL database.
-4. No separate database setup is required, as JSON files will serve as the database.
-5. Start your local server and access the website.
+3. No separate database setup is required, as JSON files will serve as the database.
+4. Start your local server and access the website.
 
 ## Usage
 
-1. Sign up or log in.
-2. Browse products and add to cart.
-3. Proceed to checkout.
-4. Enter shipping/payment info.
-5. Complete purchase and receive email confirmation.
+1. Browse products and add to cart.
+2. Proceed to checkout.
+3. Enter shipping/payment info.
+4. Complete purchase and receive email confirmation.
 
 ## Contributing
 
